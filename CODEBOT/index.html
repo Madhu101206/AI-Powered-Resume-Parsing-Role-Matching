@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CODEBOT – AI Resume Matcher</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>CODEBOT</h1>
+    <p>AI Powered Resume Parsing & Role Matching</p>
+</header>
+
+<main class="container">
+
+    <section class="card upload">
+        <h2>Upload Resume (PDF)</h2>
+        <input type="file" id="resumeInput" accept=".pdf">
+        <button onclick="parseResume()">Analyze Resume</button>
+    </section>
+
+    <section class="card">
+        <h2>Extracted Resume Information</h2>
+
+        <div class="grid">
+            <div><strong>Name </strong><span id="name">—</span></div>
+            <div><strong>Email </strong><span id="email">—</span></div>
+            <div><strong>Phone </strong><span id="phone">—</span></div>
+            <div class="full"><strong>Skills </strong><span id="skills">—</span></div>
+            <div class="full"><strong>Education </strong><span id="education">—</span></div>
+            <div class="full"><strong>Experience </strong><span id="experience">—</span></div>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Role Matching Results</h2>
+        <div id="results"></div>
+    </section>
+
+</main>
+
+<footer>
+    <p>CODEBOT – AI Powered Website Challenge</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
